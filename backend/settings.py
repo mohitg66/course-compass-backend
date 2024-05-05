@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-6q-t^yjgf9_=v1$q2mxsjb@0sx2-xlpz$gs1*wff)z=7+ocnbk
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['course-compass-backend.onrender.com']
 
 
 # Application definition
