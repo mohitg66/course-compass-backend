@@ -1,23 +1,18 @@
 {
     "version": 2,
-    "builds": [
-      {
-        "src": "course-compass-backend/wsgi.py",
-        "use": "@vercel/python"
-      },
-      {
-        "src": "course-compass-backend/staticfiles/**/*",
-        "use": "@vercel/static"
+    "functions": {
+      "api/index.py": {
+        "runtime": "@vercel/python"
       }
-    ],
+    },
     "routes": [
       {
         "src": "/static/(.*)",
         "dest": "/course-compass-backend/staticfiles/$1"
       },
       {
-        "src": "(.*)",
-        "dest": "course-compass-backend/wsgi.py"
+        "src": "/(.*)",
+        "dest": "/api/index.py"
       }
     ]
   }
