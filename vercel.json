@@ -1,14 +1,4 @@
 {
   "version": 2,
-  "buildCommand": "./build.sh",
-  "routes": [
-    {
-      "src": "/static/(.*)",
-      "dest": "/static/$1"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "course-compass-backend/wsgi.application"
-    }
-  ]  
+  "buildCommand": "./build.sh"  
 }
