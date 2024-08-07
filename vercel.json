@@ -1,14 +1,6 @@
 {
   "version": 2,
-  "builds": [
-    {
-      "src": "course-compass-backend/wsgi.py",
-      "use": "@vercel/python",
-      "config": {
-        "maxLambdaSize": "15mb"
-      }
-    }
-  ],
+  "buildCommand": "./build.sh",
   "routes": [
     {
       "src": "/static/(.*)",
@@ -18,6 +10,5 @@
       "src": "/(.*)",
       "dest": "course-compass-backend/wsgi.application"
     }
-  ],
-  "buildCommand": "./build.sh"
+  ]  
 }
